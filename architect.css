@@ -1,0 +1,197 @@
+*
+{
+    margin : 0px;
+    padding: 0px;
+    font-family: 'Crimson Text', serif;
+}
+
+.header
+{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+   
+    z-index: -1;
+}
+.carousel img{
+    height: 120vh;
+}
+.hamburger{
+    margin-top: 0.5rem;
+}
+.line{
+    width: 16px;
+    height: 3px;
+    background-color: whitesmoke;
+    margin: 3px;
+    
+}
+
+.navbar{
+
+    background-color: #3b4044;
+    
+}
+.nav-item a{
+    color: whitesmoke !important;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 5px;
+}
+.navbar-brand{
+    color: whitesmoke;
+}
+.nav-item a:hover{
+
+color: rgb(177, 156, 124) !important;
+text-decoration: underline;
+
+}
+.header-section::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(126, 154, 167, 0.795);
+    opacity: 0.5;
+    left: 0px;
+  
+}
+.header-section{
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    color: rgb(227, 211, 184)
+    
+}
+
+.header-section h1{
+    font-size: 4.5rem;
+    margin-top: 27px;
+    
+}
+.header-section p{
+    font-size: 1.5rem;
+}
+
+
+.cards::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 22rem;
+    background-color: white;
+}
+
+.card{
+    background-color: #484f4b;
+    color: white;
+    margin-top: 40px;
+    text-align: center;
+    font-weight: 500;
+    border: none;
+}
+
+.card .btn{
+    color: white;
+    background-color: #806e6edb;
+    border-radius: 1px;
+    height: 42px;
+}
+.card .btn:hover{
+    border: 1px solid white;
+}
+
+.about::before
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 370px;
+    background-color: rgb(184, 183, 191);
+    left : 0px;
+    z-index: -1;
+}
+.about{
+    color: #3b4044;
+    font-weight: 500;
+    
+}
+.about h2{
+    text-align: center;
+    align-content: center;
+    display: block;
+    width: 100%;
+    padding: 33px;
+}
+
+.about .btn{
+    color: white;
+    background-color: #3b4044;
+    
+}
+.about .btn:hover{
+    border: 1px solid whitesmoke;
+    text-decoration: underline;
+}
+.form::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    background-color:#484f4b ;
+    z-index: -1;
+}
+
+.form{
+    margin-top: 8rem;
+    
+    color:whitesmoke ;
+    font-size: 18px;
+}
+ .submitbtn{
+ background-color:#806e6edb ;
+ color: whitesmoke;
+ border: none;
+ height: 30px;
+ width: 70px;
+ border-radius: 3px;
+ margin-left: 10px;
+}
+.submitbtn:hover{
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+}
+
+
+
+@media(min-width:960px){
+    .navbar{
+        height: 80px;
+    }
+}
+
+@media (max-width:720px){
+    .about{
+        font-size: 18px;
+    }
+    .card-body{
+        width: 100%;
+    }
+}
+
+@media (max-width:576px){
+    .about{
+        font-size: 10px;
+    }
+    .card-body{
+        width: 100%;
+    }
+    .header-section{
+        font-size: 10px;
+        height: 20rem;
+    }
+}
