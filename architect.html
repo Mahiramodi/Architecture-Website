@@ -103,6 +103,8 @@
           <div class="card">
             <div class="card-body">
               <h1 class="card-title">CLIENTS</h1>
+            
+              <!-- <img src="https://www.tuktukdesign.com/wp-content/uploads/2020/01/client-icon-vector.jpg" alt="" height="70px"> -->
               <p class="card-text">With supporting text below as a natural lead-in to additional content.I'm a
                 paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double
                 click me to add your own content and make changes to the font. I’m a great place for you to tell a story
@@ -119,7 +121,10 @@
                 paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double
                 click me to add your own content and make changes to the font. I’m a great place for you to tell a story
                 and let your users know a little more about you.</p>
+
               <a href="services.html" class="btn">Read More</a>
+
+
             </div>
           </div>
         </div>
@@ -174,7 +179,7 @@
               <div class="errorpassword"></div>
             </div>
             <div class="form-group">
-              <label for="exampleFormControlTextarea1">Suggestions</label>
+              <label for="exampleFormControlTextarea1">Suggestions (optional)</label>
               <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
             </div>
             <div class="form-check">
@@ -216,117 +221,11 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
+  <script src="main.js">  
 
     // *****************************  FORM VALIDATION CODE  *************************************//
 
-    $(document).ready(function () {
-
-      $('.errorname').hide();
-      $('.erroremail').hide();
-      $('.errorpassword').hide();
-
-      var error_name = true;
-      var error_email = true;
-      var error_password = true;
-
-
-      $('#exampleInputName').keyup(function () {
-        check_name();
-      });
-
-
-      function check_name() {
-        var name = $('#exampleInputName').val();
-        if (name.length == "") {
-          $('.errorname').html('***Enter name***');
-          $('.errorname').css("color", "#fff68e");
-          $('.errorname').show();
-          $('.errorname').focus();
-          error_name = false;
-          return false;
-        }
-        if (name.length <= 3 || name.length >= 25) {
-          $('.errorname').show();
-          $('.errorname').html('***Name must be between 3 to 25 letters***');
-          $('.errorname').css("color", "#fff68e");
-          $('.errorname').focus();
-          error_name = false;
-          return false
-        }
-      }
-
-      $('#exampleInputPassword1').keyup(function () {
-        check_password();
-      });
-
-      function check_password() {
-        var password = $('#exampleInputPassword1').val();
-        if (password == "") {
-          $('.errorpassword').show();
-          $('.errorpassword').html('***Enter Password***');
-          $('.errorpassword').css("color", "#fff68e");
-          $('.errorpassword').focus();
-          error_password = false;
-          return false
-        }
-        if (password.length <= 7) {
-          $('.errorpassword').show();
-          $('.errorpassword').html('***Password must have atleast 8 letters***');
-          $('.errorpassword').css("color", "#fff68e");
-          $('.errorpassword').focus();
-          error_password = false;
-          return false;
-        }
-      }
-
-
-      $('#exampleInputEmail1').keyup(function () {
-        check_email();
-      });
-
-      function check_email() {
-        var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-        var email = $('#exampleInputEmail1').val();
-        if (pattern.test(email) && email !== '') {
-          $("#email_error_message").hide();
-          $("#form_email").css("border-bottom", "2px solid #34F458");
-        } else {
-          $("#email_error_message").html("Invalid Email");
-          $("#email_error_message").show();
-          $("#form_email").css("border-bottom", "2px solid #F90A0A");
-          error_email = false;
-        }
-      }
-
-
-      $('.submitbtn').click(function(){
-         error_password = true;
-         error_name = true;
-         error_email = true;
-
-        check_name();
-        check_password();
-
-        if (  error_name == true &&  error_email == true &&  error_password == true ){
-           $('.message').html("Form submitted successfully");     
-              return( true);
-      }
-
-      else{
-        $('.message').html("There is some error in your form ");
-      }
-    });
-              // **************************   FORM VALIDATION COMPLETED   ***************************************//
-
-     
-
     
-    
-    });
-    
-    // INSERT INTO `contact` (`S.No`, `Name`, `Email`, `Password`, `Suggestions`, `Date`) VALUES ('1', 'name', 'name@name.com', 'thepassword', 'first php form', 'current_timestamp()');
-
   </script>
 
 </body>
